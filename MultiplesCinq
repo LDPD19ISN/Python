@@ -1,0 +1,15 @@
+def entree(): #L'utilisateur définit les bornes
+    a = int(input())
+    b = int(input())
+    return a,b;
+    
+def traitement(Min, Max): #On prend les valeurs entrées par l'utilisateur
+    add = 0
+    while Min<Max: #Tant que le minimum est inférieur au maximum
+        if Min%5==0: #On teste si le minimum est un multiple de 5
+            add = add + Min #on additionne le minimum actuel avec la variable addition
+        Min = Min+1 #on incrémente le minimum
+    return add;
+
+a,b = entree()
+print(traitement(a,b)) # ceci affiche le résultat de l'addition de tous les multiples de 5 entre a et b
